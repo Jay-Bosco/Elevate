@@ -86,6 +86,7 @@ export default function Navbar() {
                 width={40}
                 height={40}
                 priority
+                unoptimized
                 className="h-10 w-10 object-contain"
               />
             </Link>
@@ -204,6 +205,7 @@ export default function Navbar() {
                   alt="Elevate"
                   width={32}
                   height={32}
+                  unoptimized
                   className="h-8 w-8 object-contain"
                 />
               </Link>

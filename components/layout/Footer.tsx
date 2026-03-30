@@ -11,7 +11,7 @@ export default function Footer() {
           {/* Brand — full width on mobile */}
           <div className="col-span-2 lg:flex-shrink-0 lg:w-[368px]">
             <div className="mb-4">
-              <Image src="/logo.png" alt="Elevate" width={40} height={40} className="h-10 w-10 object-contain"/>
+              <Image src="/logo.png" alt="Elevate" width={40} height={40} unoptimized className="h-10 w-10 object-contain"/>
             </div>
             <p className="text-white/70 font-poppins text-sm lg:text-base" style={{ fontWeight: 400, lineHeight: "24px", maxWidth: "368px" }}>
               ElevateBrand CiC (Elev8) - supporting Black and Migrant creatives through practical learning and community
