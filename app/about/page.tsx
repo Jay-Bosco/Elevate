@@ -1,6 +1,5 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import Image from "next/image";
 
 const visionMission = [
   {
@@ -24,7 +23,7 @@ const visionMission = [
     ),
   },
   {
-    title: "Vision",
+    title: "Value Proposition",
     description: "For low-income Black and migrant creatives (20–45), our hybrid platform provides skills, confidence, and support to build sustainable livelihoods through online and in-person learning.",
     icon: (
       <svg width="22" height="33" viewBox="0 0 22 33" fill="none" xmlns="http://www.w3.org/2000/svg">
