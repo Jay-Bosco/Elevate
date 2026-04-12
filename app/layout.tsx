@@ -24,6 +24,13 @@ export const metadata: Metadata = {
   title: "Elevate — From Exclusion to Elevation",
   description:
     "Supporting Black entrepreneurs and leaders through design thinking, leadership development, and community coaching.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: { url: "/icon.png", sizes: "32x32" },
+  },
 };
 
 export default function RootLayout({
