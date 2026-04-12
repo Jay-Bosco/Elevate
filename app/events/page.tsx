@@ -130,11 +130,11 @@ export default function EventsPage() {
       <main>
 
         {/* ── Hero ── */}
-        <section className="w-full flex items-center justify-center text-center px-5 lg:px-[85px]" style={{ height: "350px", background: "linear-gradient(180deg, #2a1898 0%, #4229C9 40%, #4a90d9 80%, #6ab4f5 100%)" }}>
-          <div className="w-full max-w-[1068px]">
-            <h1 className="font-poppins text-white mb-4 text-2xl sm:text-3xl lg:text-[40px]" style={{ fontWeight: 600, lineHeight: "1.4", letterSpacing: "-0.02em" }}>Events</h1>
-            <p className="text-white/90 mx-auto text-base sm:text-lg lg:text-[20px]" style={{ fontFamily: "var(--font-dm-sans), Roboto, sans-serif", fontWeight: 400, lineHeight: "1.6", letterSpacing: "-0.02em" }}>
-              Connect, learn, and grow with our community through workshops, meetups,<br className="hidden lg:block" /> and special events
+        <section className="w-full flex items-center justify-center text-center px-5 py-16" style={{ minHeight: "346px", background: "linear-gradient(180deg, #2a1898 0%, #4229C9 40%, #4a90d9 80%, #6ab4f5 100%)" }}>
+          <div style={{ width: "100%", maxWidth: "1191px", display: "flex", flexDirection: "column", gap: "24px", alignItems: "center", justifyContent: "center" }}>
+            <h1 className="font-poppins text-white" style={{ fontWeight: 600, fontSize: "40px", lineHeight: "64px", letterSpacing: "-0.02em", textAlign: "center", width: "100%", maxWidth: "1068px" }}>Events</h1>
+            <p className="text-white/90" style={{ fontFamily: "var(--font-dm-sans), Roboto, sans-serif", fontWeight: 400, fontSize: "24px", lineHeight: "36px", letterSpacing: "-0.02em", textAlign: "center", width: "100%", maxWidth: "736px" }}>
+              Connect, learn, and grow with our community through workshops, meetups, and special events
             </p>
           </div>
         </section>
@@ -146,8 +146,8 @@ export default function EventsPage() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {eventTypes.map((et) => (
                 <div key={et.title} className="bg-white flex flex-col gap-4 p-6" style={{ borderWidth: "0.2px", borderStyle: "solid", borderColor: "#E5E7EB", borderRadius: "12px" }}>
-                  <div className="flex items-center justify-center flex-shrink-0" style={{ width: "48px", height: "48px", borderRadius: "5px", backgroundColor: et.iconBg, paddingLeft: "3px", paddingRight: "3px" }}>{et.icon}</div>
-                  <p className="font-poppins text-[#111827]" style={{ fontWeight: 600, fontSize: "24px", lineHeight: "28px", letterSpacing: "-0.01em", width: "320px", maxWidth: "100%" }}>{et.title}</p>
+                  <div className="flex items-center justify-center flex-shrink-0" style={{ width: "48px", height: "48px", borderRadius: "5px", backgroundColor: et.iconBg }}>{et.icon}</div>
+                  <p className="font-poppins text-[#111827]" style={{ fontWeight: 600, fontSize: "24px", lineHeight: "28px", letterSpacing: "-0.01em", width: "100%", maxWidth: "320px" }}>{et.title}</p>
                   <p className="font-poppins text-[#000000]" style={{ fontWeight: 400, fontSize: "14px", lineHeight: "1.6" }}>{et.description}</p>
                 </div>
               ))}
@@ -166,7 +166,7 @@ export default function EventsPage() {
                     {/* Tags */}
                     <div className="flex items-center gap-2">
                       {ev.tags.map((tag) => (
-                        <span key={tag.label} className="font-poppins inline-flex items-center justify-center" style={{ backgroundColor: tag.bg, color: tag.color, width: tag.w, height: "18px", borderRadius: "5px", paddingLeft: "8px", paddingRight: "8px", fontSize: "12px", fontWeight: 600, letterSpacing: "-0.25px", lineHeight: 1, whiteSpace: "nowrap" }}>{tag.label}</span>
+                        <span key={tag.label} className="font-poppins inline-flex items-center justify-center" style={{ backgroundColor: tag.bg, color: tag.color, width: tag.w, height: "18px", borderRadius: "5px", fontSize: "12px", fontWeight: 600, letterSpacing: "-0.25px", lineHeight: 1, whiteSpace: "nowrap" }}>{tag.label}</span>
                       ))}
                     </div>
                     {/* Title */}
@@ -200,11 +200,11 @@ export default function EventsPage() {
             <h2 className="font-poppins font-bold text-[#111827] text-center mb-10 text-xl sm:text-2xl lg:text-[28px]">Why not Attend Our Events ?</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2" style={{ columnGap: "60px", rowGap: "32px" }}>
               {attendReasons.map((r) => (
-                <div key={r.title} className="flex items-start" style={{ gap: "10px", width: "517px", maxWidth: "100%" }}>
+                <div key={r.title} className="flex items-start" style={{ gap: "10px", width: "100%", maxWidth: "517px" }}>
                   <CheckCircle />
                   <div>
-                    <p className="font-poppins text-[#111827]" style={{ fontWeight: 600, fontSize: "24px", lineHeight: "28px", letterSpacing: "-0.01em", width: "466px", maxWidth: "100%", marginBottom: "4px" }}>{r.title}</p>
-                    <p className="font-poppins text-[#000000]" style={{ fontWeight: 400, fontSize: "16px", lineHeight: "20px", letterSpacing: "0", width: "466px", maxWidth: "100%" }}>{r.description}</p>
+                    <p className="font-poppins text-[#111827]" style={{ fontWeight: 600, fontSize: "24px", lineHeight: "28px", letterSpacing: "-0.01em", width: "100%", maxWidth: "466px", marginBottom: "4px" }}>{r.title}</p>
+                    <p className="font-poppins text-[#000000]" style={{ fontWeight: 400, fontSize: "16px", lineHeight: "20px", letterSpacing: "0", width: "100%", maxWidth: "466px" }}>{r.description}</p>
                   </div>
                 </div>
               ))}
@@ -216,7 +216,7 @@ export default function EventsPage() {
         <section className="w-full flex flex-col items-center justify-center text-center px-5 py-16 lg:py-0" style={{ minHeight: "350px", background: "linear-gradient(135deg, #2a1898 0%, #4229C9 50%, #1a7fc4 100%)", gap: "10px" }}>
           <h2 className="font-poppins font-bold text-white text-2xl lg:text-[32px]" style={{ lineHeight: "1.3", letterSpacing: "-0.25px" }}>Why Attend Our Events?</h2>
           <p className="font-poppins text-white/80 text-sm lg:text-base" style={{ lineHeight: "24px" }}>Subscribe to our newsletter to be the first to know about upcoming events</p>
-          <div className="flex flex-col sm:flex-row items-center justify-center mt-2" style={{ gap: "16px", width: "437px", maxWidth: "100%" }}>
+          <div className="flex flex-col sm:flex-row items-center justify-center mt-2" style={{ gap: "16px", width: "100%", maxWidth: "437px" }}>
             <Link href="#" className="font-poppins font-medium inline-flex items-center justify-center transition-colors" style={{ width: "209px", height: "50px", borderRadius: "8px", border: "1px solid white", backgroundColor: "transparent", color: "white", fontSize: "15px", padding: "12px", gap: "8px", flexShrink: 0 }}>Subscribe to Newsletter</Link>
             <Link href="#" className="font-poppins font-medium inline-flex items-center justify-center transition-colors" style={{ width: "209px", height: "50px", borderRadius: "8px", border: "2px solid white", backgroundColor: "white", color: "#4229C9", fontSize: "15px", padding: "12px", gap: "8px", flexShrink: 0 }}>Join Our Community</Link>
           </div>

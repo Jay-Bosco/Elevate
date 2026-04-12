@@ -121,33 +121,33 @@ export default function FreeResourcesPage() {
       <main>
 
         {/* ── Hero ── */}
-        <section className="w-full flex items-center justify-center text-center px-5" style={{ height: "346px", background: "linear-gradient(180deg, #2a1898 0%, #4229C9 40%, #4a90d9 80%, #6ab4f5 100%)" }}>
-          <div style={{ width: "1191px", maxWidth: "100%", display: "flex", flexDirection: "column", gap: "24px", alignItems: "center", justifyContent: "center" }}>
-            <h1 className="font-poppins text-white" style={{ fontWeight: 600, fontSize: "40px", lineHeight: "64px", letterSpacing: "-0.02em", textAlign: "center", width: "1068px", maxWidth: "100%" }}>Free Resources</h1>
-            <p className="text-white/90" style={{ fontFamily: "var(--font-dm-sans), Roboto, sans-serif", fontWeight: 400, fontSize: "24px", lineHeight: "36px", letterSpacing: "-0.02em", textAlign: "center", width: "736px", maxWidth: "100%" }}>
+        <section className="w-full flex items-center justify-center text-center px-5" style={{ minHeight: "346px", background: "linear-gradient(180deg, #2a1898 0%, #4229C9 40%, #4a90d9 80%, #6ab4f5 100%)" }}>
+          <div style={{ width: "100%", maxWidth: "1191px", display: "flex", flexDirection: "column", gap: "24px", alignItems: "center", justifyContent: "center" }}>
+            <h1 className="font-poppins text-white" style={{ fontWeight: 600, fontSize: "40px", lineHeight: "64px", letterSpacing: "-0.02em", textAlign: "center", width: "100%", maxWidth: "1068px" }}>Free Resources</h1>
+            <p className="text-white/90" style={{ fontFamily: "var(--font-dm-sans), Roboto, sans-serif", fontWeight: 400, fontSize: "24px", lineHeight: "36px", letterSpacing: "-0.02em", textAlign: "center", width: "100%", maxWidth: "736px" }}>
               Accessible learning materials and tools to support your creative and entrepreneurial journey
             </p>
           </div>
         </section>
 
         {/* ── Knowledge Should Be Accessible ── */}
-        <section className="bg-white" style={{ paddingTop: "60px", paddingBottom: "60px", paddingLeft: "104px", paddingRight: "104px" }}>
-          <div style={{ width: "1153px", maxWidth: "100%", minHeight: "139px", margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", gap: "32px" }}>
+        <section className="bg-white" style={{ paddingTop: "60px", paddingBottom: "60px" }}>
+          <div style={{ width: "100%", maxWidth: "1153px", minHeight: "139px", margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", gap: "32px" }}>
             <h2 className="font-poppins text-[#111827]" style={{ fontWeight: 600, fontSize: "32px", lineHeight: "1.2", letterSpacing: "-0.25px", textAlign: "center", width: "100%" }}>Knowledge Should Be Accessible</h2>
-            <p className="font-poppins text-[#000000]" style={{ fontWeight: 400, fontSize: "20px", lineHeight: "32px", letterSpacing: "0px", textAlign: "center", width: "1153px", maxWidth: "100%", height: "64px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <p className="font-poppins text-[#000000]" style={{ fontWeight: 400, fontSize: "20px", lineHeight: "32px", letterSpacing: "0px", textAlign: "center", width: "100%", maxWidth: "1153px",  }}>
               We believe that valuable knowledge and tools shouldn't have barriers. Our free resources are<br />designed to provide practical support to anyone looking to grow, regardless of their financial situation.
             </p>
           </div>
         </section>
 
         {/* ── Browse Resources ── */}
-        <section style={{ backgroundColor: "#47EBE00D", padding: "60px 104px" }}>
+        <section className="px-5 sm:px-8 lg:px-[104px]" style={{ backgroundColor: "#47EBE00D", paddingTop: "60px", paddingBottom: "60px" }}>
           <div className="max-w-[1232px] mx-auto">
             <h2 className="font-poppins font-bold text-[#111827] text-center mb-10" style={{ fontSize: "28px", lineHeight: "1.3" }}>Browse Resources</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {categories.map((cat) => (
                 <div key={cat.title} className="bg-white flex flex-col items-center text-center gap-4 p-6" style={{ borderWidth: "0.2px", borderStyle: "solid", borderColor: "#E5E7EB", borderRadius: "12px" }}>
-                  <div className="flex items-center justify-center" style={{ width: "48px", height: "48px", borderRadius: "5px", backgroundColor: "#4229C94D", paddingLeft: "3px", paddingRight: "3px", gap: "10px", flexShrink: 0 }}>{cat.icon}</div>
+                  <div className="flex items-center justify-center" style={{ width: "48px", height: "48px", borderRadius: "5px", backgroundColor: "#4229C94D", gap: "10px", flexShrink: 0 }}>{cat.icon}</div>
                   <p className="font-poppins font-semibold text-[#111827]" style={{ fontSize: "18px" }}>{cat.title}</p>
                   <p className="font-poppins text-[#000000]" style={{ fontWeight: 400, fontSize: "14px", lineHeight: "1.5" }}>{cat.description}</p>
                 </div>
@@ -162,16 +162,16 @@ export default function FreeResourcesPage() {
             <h2 className="font-poppins font-bold text-[#111827] text-center mb-10" style={{ fontSize: "28px", lineHeight: "1.3" }}>Featured Resources</h2>
             <div className="flex flex-col gap-4">
               {featured.map((r, i) => (
-                <div key={i} className="flex items-center justify-between gap-4 p-5" style={{ width: "1144px", maxWidth: "100%", minHeight: "178px", borderRadius: "12px", border: `0.5px solid ${r.borderColor}`, boxShadow: `0px 4px 4px 0px ${r.borderColor}`, backgroundColor: "#F7FAFA" }}>
+                <div key={i} className="flex items-center justify-between gap-4 p-5" style={{ width: "100%", maxWidth: "1144px", minHeight: "178px", borderRadius: "12px", border: `0.5px solid ${r.borderColor}`, boxShadow: `0px 4px 4px 0px ${r.borderColor}`, backgroundColor: "#F7FAFA" }}>
                   <div className="flex items-start gap-4 flex-1">
                     {/* File icon */}
-                    <div className="flex-shrink-0 flex items-center justify-center" style={{ width: "48px", height: "48px", borderRadius: "5px", backgroundColor: r.iconBg, paddingLeft: "3px", paddingRight: "3px", gap: "10px" }}>
+                    <div className="flex-shrink-0 flex items-center justify-center" style={{ width: "48px", height: "48px", borderRadius: "5px", backgroundColor: r.iconBg, gap: "10px" }}>
                       {r.icon}
                     </div>
                     <div className="flex flex-col gap-1.5 flex-1">
                       {/* Badge + meta */}
                       <div className="flex items-center gap-2">
-                        <span className="font-poppins inline-flex items-center justify-center" style={{ backgroundColor: r.badgeBg, color: r.badgeColor, width: "68px", height: "18px", borderRadius: "10px", paddingLeft: "8px", paddingRight: "8px", gap: "10px", fontSize: "11px", fontWeight: 600, whiteSpace: "nowrap" }}>{r.badge}</span>
+                        <span className="font-poppins inline-flex items-center justify-center" style={{ backgroundColor: r.badgeBg, color: r.badgeColor, width: "68px", height: "18px", borderRadius: "10px", gap: "10px", fontSize: "11px", fontWeight: 600, whiteSpace: "nowrap" }}>{r.badge}</span>
                         <span className="font-poppins" style={{ fontSize: "10px", lineHeight: "10px", letterSpacing: "0", color: "#797979", fontWeight: 400, position: "relative", top: "4px" }}>{r.meta}</span>
                       </div>
                       {/* Title */}
@@ -192,15 +192,15 @@ export default function FreeResourcesPage() {
 
         {/* ── Join Our Community ── */}
         <section className="bg-white pb-14 pt-6 px-5 sm:px-8 lg:px-[88px]">
-          <div style={{ width: "1265px", maxWidth: "100%", minHeight: "241px", margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "24px", textAlign: "center" }}>
+          <div style={{ width: "100%", maxWidth: "1265px", minHeight: "241px", margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "24px", textAlign: "center" }}>
             <svg width="48" height="48" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1 25V22.3333C1 20.9188 1.5619 19.5623 2.5621 18.5621C3.56229 17.5619 4.91885 17 6.33333 17H11.6667C13.0812 17 14.4377 17.5619 15.4379 18.5621C16.4381 19.5623 17 20.9188 17 22.3333V25M18.3333 1.17333C19.4806 1.46707 20.4974 2.13427 21.2235 3.06975C21.9497 4.00523 22.3438 5.15577 22.3438 6.34C22.3438 7.52423 21.9497 8.67477 21.2235 9.61025C20.4974 10.5457 19.4806 11.2129 18.3333 11.5067M25 25V22.3333C24.9932 21.1562 24.5972 20.0144 23.8737 19.0859C23.1502 18.1573 22.1398 17.4943 21 17.2M3.66667 6.33333C3.66667 7.74782 4.22857 9.10438 5.22876 10.1046C6.22896 11.1048 7.58551 11.6667 9 11.6667C10.4145 11.6667 11.771 11.1048 12.7712 10.1046C13.7714 9.10438 14.3333 7.74782 14.3333 6.33333C14.3333 4.91885 13.7714 3.56229 12.7712 2.5621C11.771 1.5619 10.4145 1 9 1C7.58551 1 6.22896 1.5619 5.22876 2.5621C4.22857 3.56229 3.66667 4.91885 3.66667 6.33333Z" stroke="#4229C9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-            <h2 className="font-poppins text-[#111827]" style={{ fontWeight: 600, fontSize: "32px", lineHeight: "1.2", letterSpacing: "-0.25px", textAlign: "center", width: "503px", maxWidth: "100%" }}>Join Our Community for More</h2>
-            <p className="font-poppins text-[#000000]" style={{ fontWeight: 400, fontSize: "20px", lineHeight: "24px", letterSpacing: "-0.25px", textAlign: "center", width: "959px", maxWidth: "100%" }}>
+            <h2 className="font-poppins text-[#111827]" style={{ fontWeight: 600, fontSize: "32px", lineHeight: "1.2", letterSpacing: "-0.25px", textAlign: "center", width: "100%", maxWidth: "503px" }}>Join Our Community for More</h2>
+            <p className="font-poppins text-[#000000]" style={{ fontWeight: 400, fontSize: "20px", lineHeight: "24px", letterSpacing: "-0.25px", textAlign: "center", width: "100%", maxWidth: "959px" }}>
               Get access to exclusive resources, connect with other creatives, and receive regular updates on new free materials when you join our community
             </p>
-            <div className="flex items-center mt-2" style={{ gap: "16px", width: "400px", maxWidth: "100%" }}>
+            <div className="flex flex-col sm:flex-row items-center mt-2" style={{ gap: "16px", width: "100%", maxWidth: "400px" }}>
               <Link href="#" className="font-poppins font-semibold inline-flex items-center justify-center" style={{ width: "209px", height: "50px", borderRadius: "8px", padding: "12px", gap: "8px", border: "1px solid #4229C9", backgroundColor: "#4229C9", color: "white", fontSize: "14px", flexShrink: 0 }}>Join Community (Free)</Link>
               <Link href="/events" className="font-poppins font-semibold inline-flex items-center justify-center" style={{ width: "209px", height: "50px", borderRadius: "8px", padding: "12px", gap: "8px", border: "1px solid #4229C9", backgroundColor: "transparent", color: "#4229C9", fontSize: "14px", flexShrink: 0 }}>Attend Free Events</Link>
             </div>

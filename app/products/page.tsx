@@ -56,11 +56,11 @@ export default function ProductsPage() {
       <main>
 
         {/* ── Hero ── */}
-        <section className="w-full flex items-center justify-center text-center px-5 lg:px-[85px]" style={{ height: "346px", background: "linear-gradient(180deg, #2a1898 0%, #4229C9 40%, #4a90d9 80%, #6ab4f5 100%)" }}>
-          <div className="w-full max-w-[1068px]">
-            <h1 className="font-poppins text-white mb-4 text-2xl sm:text-3xl lg:text-[40px]" style={{ fontWeight: 600, lineHeight: "1.4", letterSpacing: "-0.02em", textAlign: "center" }}>Digital Products</h1>
-            <p className="text-white/90 mx-auto text-base sm:text-lg lg:text-[24px]" style={{ fontFamily: "var(--font-dm-sans), Roboto, sans-serif", fontWeight: 400, lineHeight: "1.6", letterSpacing: "-0.02em", textAlign: "center" }}>
-              Self-paced learning resources to support your creative and entrepreneurial<br className="hidden lg:block" /> journey
+        <section className="w-full flex items-center justify-center text-center px-5 py-16" style={{ minHeight: "346px", background: "linear-gradient(180deg, #2a1898 0%, #4229C9 40%, #4a90d9 80%, #6ab4f5 100%)" }}>
+          <div style={{ width: "100%", maxWidth: "1191px", display: "flex", flexDirection: "column", gap: "24px", alignItems: "center", justifyContent: "center" }}>
+            <h1 className="font-poppins text-white text-3xl sm:text-4xl lg:text-[40px]" style={{ fontWeight: 600, lineHeight: "1.4", letterSpacing: "-0.02em", textAlign: "center", width: "100%", maxWidth: "1068px" }}>Digital Products</h1>
+            <p className="text-white/90" style={{ fontFamily: "var(--font-dm-sans), Roboto, sans-serif", fontWeight: 400, fontSize: "24px", lineHeight: "36px", letterSpacing: "-0.02em", textAlign: "center", width: "100%", maxWidth: "736px" }}>
+              Self-paced learning resources to support your creative and entrepreneurial journey
             </p>
           </div>
         </section>
@@ -83,16 +83,16 @@ export default function ProductsPage() {
               {categories.map((cat) => (
                 <div key={cat.title} className="bg-white flex flex-col" style={{ borderWidth: "0.2px", borderStyle: "solid", borderColor: "#E5E7EB", borderRadius: "12px", padding: "24px", minHeight: "388px" }}>
                   <div className="flex flex-col">
-                  <div className="flex items-center justify-center flex-shrink-0 mb-5" style={{ width: "48px", height: "48px", borderRadius: "5px", backgroundColor: cat.iconBg, border: cat.iconBorder, paddingLeft: "3px", paddingRight: "3px" }}>{cat.icon}</div>
+                  <div className="flex items-center justify-center flex-shrink-0 mb-5" style={{ width: "48px", height: "48px", borderRadius: "5px", backgroundColor: cat.iconBg, border: cat.iconBorder }}>{cat.icon}</div>
                   <p className="font-poppins text-[#111827] mb-4" style={{ fontWeight: 600, fontSize: "24px", lineHeight: "28px", letterSpacing: "-0.01em" }}>{cat.title}</p>
-                  <p className="font-poppins text-[#000000] mb-5" style={{ fontWeight: 400, fontSize: "14px", lineHeight: "16px", letterSpacing: "0" }}>{cat.description}</p>
+                  <p className="font-poppins text-[#374151] mb-5" style={{ fontWeight: 400, fontSize: "14px", lineHeight: "16px", letterSpacing: "0" }}>{cat.description}</p>
                   <ul className="flex flex-col gap-3">
                     {cat.features.map((f) => (
-                      <li key={f} className="flex items-start gap-2 font-poppins text-[#000000] text-sm"><StarIcon color={cat.starColor} fill={cat.starFill} /> {f}</li>
+                      <li key={f} className="flex items-start gap-2 font-poppins text-[#374151] text-sm"><StarIcon color={cat.starColor} fill={cat.starFill} /> {f}</li>
                     ))}
                   </ul>
                   </div>
-                  <Link href={cat.href} className="font-poppins font-semibold text-white inline-flex items-center justify-center transition-colors mt-auto" style={{ width: "100%", maxWidth: "316px", height: "32px", borderRadius: "8px", paddingTop: "12px", paddingBottom: "12px", paddingLeft: "24px", paddingRight: "24px", backgroundColor: cat.btnColor, fontSize: "14px" }}>{cat.btnLabel}</Link>
+                  <Link href={cat.href} className="font-poppins font-semibold text-white inline-flex items-center justify-center transition-colors mt-auto" style={{ width: "100%", maxWidth: "316px", height: "32px", borderRadius: "8px", paddingTop: "12px", paddingBottom: "12px", backgroundColor: cat.btnColor, fontSize: "14px" }}>{cat.btnLabel}</Link>
                 </div>
               ))}
             </div>
@@ -107,11 +107,11 @@ export default function ProductsPage() {
               {featured.map((p) => (
                 <div key={p.title} className="border border-[#E5E7EB] rounded-2xl p-6 flex flex-col gap-3 bg-white hover:shadow-md transition-shadow">
                   <div className="flex items-center justify-between">
-                    <span className="font-poppins" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", backgroundColor: p.badgeBg, color: p.badgeText, width: p.badgeW, height: "18px", borderRadius: "5px", paddingLeft: "8px", paddingRight: "8px", fontSize: "11px", fontWeight: 700, letterSpacing: "0.02em", whiteSpace: "nowrap", lineHeight: 1 }}>{p.badge}</span>
+                    <span className="font-poppins" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", backgroundColor: p.badgeBg, color: p.badgeText, width: p.badgeW, height: "18px", borderRadius: "5px", fontSize: "11px", fontWeight: 700, letterSpacing: "0.02em", whiteSpace: "nowrap", lineHeight: 1 }}>{p.badge}</span>
                     <span className="font-poppins font-bold text-[#111827] text-xl lg:text-[22px]">{p.price}</span>
                   </div>
                   <p className="font-poppins font-semibold text-[#111827] text-base lg:text-lg">{p.title}</p>
-                  <p className="font-poppins text-[#000000] flex-1 text-sm" style={{ lineHeight: "22px" }}>{p.description}</p>
+                  <p className="font-poppins text-[#374151] flex-1 text-sm" style={{ lineHeight: "22px" }}>{p.description}</p>
                   <div className="flex flex-wrap items-center justify-between gap-3 mt-2">
                     <span className="font-poppins text-[#6B7280] text-xs inline-flex items-center"><DownloadIcon color="#6B7280" />{p.meta}</span>
                     <Link href={p.href} className="font-poppins font-semibold text-white inline-flex items-center justify-center transition-colors" style={{ height: "38px", padding: "0 18px", borderRadius: "8px", backgroundColor: p.btnColor, fontSize: "13px" }}>Purchase Now</Link>
@@ -128,11 +128,11 @@ export default function ProductsPage() {
             <h2 className="font-poppins font-bold text-[#111827] text-center mb-10 text-xl sm:text-2xl lg:text-[28px]">Why Choose Digital Products?</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2" style={{ columnGap: "60px", rowGap: "32px" }}>
               {reasons.map((r) => (
-                <div key={r.title} className="flex items-start" style={{ gap: "10px", width: "517px", maxWidth: "100%" }}>
+                <div key={r.title} className="flex items-start" style={{ gap: "10px", width: "100%", maxWidth: "517px" }}>
                   <CheckCircle />
                   <div>
                     <p className="font-poppins font-semibold text-[#111827] mb-1 text-base">{r.title}</p>
-                    <p className="font-poppins text-[#000000] text-sm" style={{ lineHeight: "22px" }}>{r.description}</p>
+                    <p className="font-poppins text-[#374151] text-sm" style={{ lineHeight: "22px" }}>{r.description}</p>
                   </div>
                 </div>
               ))}
@@ -147,7 +147,7 @@ export default function ProductsPage() {
         >
           <h2 className="font-poppins font-bold text-white text-2xl lg:text-[32px]" style={{ lineHeight: "1.3", letterSpacing: "-0.25px" }}>Start Learning Today</h2>
           <p className="font-poppins text-white/80 text-sm lg:text-base" style={{ lineHeight: "24px" }}>Invest in your growth with our curated digital products</p>
-          <div className="flex flex-col sm:flex-row items-center justify-center mt-2" style={{ gap: "8px", width: "415px", maxWidth: "100%" }}>
+          <div className="flex flex-col sm:flex-row items-center justify-center mt-2" style={{ gap: "8px", width: "100%", maxWidth: "415px" }}>
             <Link href="/products" className="font-poppins font-medium inline-flex items-center justify-center gap-2 hover:bg-white/10 transition-colors" style={{ width: "209px", height: "50px", borderRadius: "8px", border: "1px solid white", backgroundColor: "transparent", color: "white", fontSize: "15px", padding: "0 12px", flexShrink: 0 }}>Browse All Products</Link>
             <Link href="/free-resources" className="font-poppins font-medium inline-flex items-center justify-center gap-2 hover:bg-white/90 transition-colors" style={{ width: "209px", height: "50px", borderRadius: "8px", border: "2px solid white", backgroundColor: "white", color: "#4229C9", fontSize: "15px", padding: "0 12px", flexShrink: 0 }}>View Free Resources</Link>
           </div>

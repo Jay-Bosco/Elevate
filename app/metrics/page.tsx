@@ -95,10 +95,10 @@ export default function MetricsPage() {
       <main>
 
         {/* ── Hero ── */}
-        <section className="w-full flex items-center justify-center text-center px-5 lg:px-[85px]" style={{ height: "350px", background: "linear-gradient(180deg, #2a1898 0%, #4229C9 40%, #4a90d9 80%, #6ab4f5 100%)" }}>
+        <section className="w-full flex items-center justify-center text-center px-5 py-16" style={{ minHeight: "346px", background: "linear-gradient(180deg, #2a1898 0%, #4229C9 40%, #4a90d9 80%, #6ab4f5 100%)" }}>
           <div className="w-full max-w-[1068px]">
-            <h1 className="font-poppins text-white mb-4" style={{ fontWeight: 600, fontSize: "40px", lineHeight: "64px", letterSpacing: "-0.02em", textAlign: "center", width: "1068px", maxWidth: "100%" }}>Metrics & Impact</h1>
-            <p className="text-white/90 mx-auto" style={{ fontFamily: "var(--font-dm-sans), Roboto, sans-serif", fontWeight: 400, fontSize: "24px", lineHeight: "36px", letterSpacing: "-0.02em", textAlign: "center", width: "736px", maxWidth: "100%" }}>
+            <h1 className="font-poppins text-white mb-4" style={{ fontWeight: 600, fontSize: "40px", lineHeight: "64px", letterSpacing: "-0.02em", textAlign: "center", width: "100%", maxWidth: "1068px" }}>Metrics & Impact</h1>
+            <p className="text-white/90 mx-auto" style={{ fontFamily: "var(--font-dm-sans), Roboto, sans-serif", fontWeight: 400, fontSize: "24px", lineHeight: "36px", letterSpacing: "-0.02em", textAlign: "center", width: "100%", maxWidth: "736px" }}>
               Transparent reporting on our progress, outcomes, and community impact
             </p>
           </div>
@@ -108,22 +108,22 @@ export default function MetricsPage() {
         <section className="bg-white py-10 lg:py-16 px-5 sm:px-8 lg:px-[85px]">
           <div className="max-w-[1270px] mx-auto text-center">
             <h2 className="font-poppins font-bold text-[#111827] mb-6" style={{ fontWeight: 600, fontSize: "32px", lineHeight: "1.2", letterSpacing: "-0.25px", textAlign: "center", width: "100%" }}>Measuring What Matters</h2>
-            <p className="font-poppins text-[#000000] mx-auto" style={{ fontWeight: 400, fontSize: "20px", lineHeight: "32px", letterSpacing: "-0.25px", textAlign: "center", width: "1153px", maxWidth: "100%" }}>
+            <p className="font-poppins text-[#000000] mx-auto" style={{ fontWeight: 400, fontSize: "20px", lineHeight: "32px", letterSpacing: "-0.25px", textAlign: "center", width: "100%", maxWidth: "1153px" }}>
               We believe in accountability and transparency. Our impact reports track both quantitative metrics and qualitative outcomes, ensuring we're delivering meaningful support to Black and migrant creatives.
             </p>
           </div>
         </section>
 
         {/* ── Pilot Programme Results ── */}
-        <section style={{ backgroundColor: "rgba(71,235,224,0.05)", paddingTop: "61px", paddingBottom: "61px", paddingLeft: "104px", paddingRight: "104px", gap: "10px", minHeight: "631px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+        <section className="px-5 sm:px-8 lg:px-[104px]" style={{ backgroundColor: "rgba(71,235,224,0.05)", paddingTop: "61px", paddingBottom: "61px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
           <div className="max-w-[1270px] mx-auto">
             <h2 className="font-poppins text-[#111827] text-center mb-4" style={{ fontWeight: 600, fontSize: "32px", lineHeight: "1.2", letterSpacing: "-0.25px", textAlign: "center", width: "100%" }}>Pilot Programme Results</h2>
-            <p className="font-poppins text-[#000000] text-center mb-10" style={{ fontWeight: 400, fontSize: "20px", lineHeight: "32px", letterSpacing: "-0.25px", width: "1153px", maxWidth: "100%" }}>
+            <p className="font-poppins text-[#000000] text-center mb-10" style={{ fontWeight: 400, fontSize: "20px", lineHeight: "32px", letterSpacing: "-0.25px", width: "100%", maxWidth: "1153px" }}>
               Our initial programmes demonstrated strong demand, proven engagement, and high satisfaction among participants
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3" style={{ gap: "16px", maxWidth: "1232px", margin: "0 auto" }}>
+            <div className="grid grid-cols-2 sm:grid-cols-3" style={{ gap: "12px", maxWidth: "1232px", margin: "0 auto" }}>
               {pilotStats.map((s) => (
-                <div key={s.label} className="bg-white flex flex-col items-center text-center" style={{ height: "169px", borderWidth: "0.2px", borderStyle: "solid", borderColor: "#E5E7EB", borderRadius: "12px", padding: "24px", gap: "10px", justifyContent: "center" }}>
+                <div key={s.label} className="bg-white flex flex-col items-center text-center" style={{ minHeight: "120px", borderWidth: "0.2px", borderStyle: "solid", borderColor: "#E5E7EB", borderRadius: "12px", padding: "24px", gap: "10px", justifyContent: "center" }}>
                   <div>{s.icon}</div>
                   <p className="font-poppins font-bold text-[#4229C9]" style={{ fontSize: "28px", lineHeight: "1.2" }}>{s.value}</p>
                   <p className="font-poppins text-[#000000]" style={{ fontWeight: 400, fontSize: "13px", lineHeight: "1.5" }}>{s.label}</p>
@@ -135,9 +135,9 @@ export default function MetricsPage() {
 
         {/* ── Key Outcomes ── */}
         <section className="bg-white py-10 lg:py-16 px-5 sm:px-8 lg:px-[137px]">
-          <div style={{ width: "1166px", maxWidth: "100%", minHeight: "231px", display: "flex", flexDirection: "column", gap: "32px", margin: "0 auto" }}>
+          <div style={{ width: "100%", maxWidth: "1166px", minHeight: "231px", display: "flex", flexDirection: "column", gap: "32px", margin: "0 auto" }}>
             <h2 className="font-poppins text-[#111827] text-center" style={{ fontWeight: 600, fontSize: "32px", lineHeight: "1.2", letterSpacing: "-0.25px", textAlign: "center", width: "100%" }}>Key Outcomes from Pilot</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: "16px", width: "1166px", maxWidth: "100%", minHeight: "166px" }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: "16px", width: "100%", maxWidth: "1166px", minHeight: "166px" }}>
               {keyOutcomes.map((o) => (
                 <div key={o} className="flex items-center gap-3" style={{ height: "75px", border: "0.5px solid #370659", borderRadius: "12px", padding: "24px", gap: "10px" }}>
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0, position: "relative", top: "2px", left: "2px" }}>
@@ -181,7 +181,7 @@ export default function MetricsPage() {
             <h2 className="font-poppins text-[#111827] text-center mb-10" style={{ fontWeight: 600, fontSize: "32px", lineHeight: "28px", letterSpacing: "-0.25px", textAlign: "center", width: "100%" }}>Impact Reports</h2>
             <div className="flex flex-col gap-4">
               {impactReports.map((r) => (
-                <div key={r.title} className="flex items-center justify-between gap-4 p-6" style={{ border: `0.5px solid ${r.borderColor}`, borderRadius: "12px" }}>
+                <div key={r.title} className="flex flex-wrap items-start justify-between gap-4 p-4 sm:p-6" style={{ border: `0.5px solid ${r.borderColor}`, borderRadius: "12px" }}>
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0">
                       <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -189,12 +189,12 @@ export default function MetricsPage() {
                       </svg>
                     </div>
                     <div>
-                      <p className="font-poppins text-[#111827] mb-1" style={{ fontWeight: 500, fontSize: "20px", lineHeight: "28px", letterSpacing: "-0.01em", width: "707px", maxWidth: "100%" }}>{r.title}</p>
-                      <p className="font-poppins mb-2" style={{ fontWeight: 400, fontSize: "14px", lineHeight: "20px", letterSpacing: "0", color: "#797979", width: "707px", maxWidth: "100%" }}>{r.description}</p>
-                      <p className="font-poppins" style={{ fontWeight: 400, fontSize: "10px", lineHeight: "10px", letterSpacing: "0", color: "#797979", width: "195px", maxWidth: "100%" }}>{r.meta}</p>
+                      <p className="font-poppins text-[#111827] mb-1" style={{ fontWeight: 500, fontSize: "20px", lineHeight: "28px", letterSpacing: "-0.01em", width: "100%", maxWidth: "707px" }}>{r.title}</p>
+                      <p className="font-poppins mb-2" style={{ fontWeight: 400, fontSize: "14px", lineHeight: "20px", letterSpacing: "0", color: "#797979", width: "100%", maxWidth: "707px" }}>{r.description}</p>
+                      <p className="font-poppins" style={{ fontWeight: 400, fontSize: "10px", lineHeight: "10px", letterSpacing: "0", color: "#797979", width: "100%", maxWidth: "195px" }}>{r.meta}</p>
                     </div>
                   </div>
-                  <Link href="#" className="font-poppins font-semibold inline-flex items-center justify-center flex-shrink-0 transition-colors" style={{ height: "36px", padding: "0 20px", borderRadius: "8px", backgroundColor: r.btnColor, color: r.btnText, fontSize: "13px", whiteSpace: "nowrap" }}>Download</Link>
+                  <Link href="#" className="font-poppins font-semibold inline-flex items-center justify-center transition-colors" style={{ height: "36px", padding: "0 20px", borderRadius: "8px", backgroundColor: r.btnColor, color: r.btnText, fontSize: "13px", whiteSpace: "nowrap" }}>Download</Link>
                 </div>
               ))}
             </div>
@@ -202,20 +202,20 @@ export default function MetricsPage() {
         </section>
 
         {/* ── Our Approach to Measurement ── */}
-        <section style={{ backgroundColor: "#47EBE00D", paddingTop: "60px", paddingBottom: "60px", paddingLeft: "174px", paddingRight: "174px", gap: "10px", minHeight: "739px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+        <section className="px-5 sm:px-8 lg:px-[174px]" style={{ backgroundColor: "#47EBE00D", paddingTop: "60px", paddingBottom: "60px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
           <div className="max-w-[1270px] mx-auto">
-          <div style={{ width: "1091px", maxWidth: "100%", height: "123px", display: "flex", flexDirection: "column", gap: "16px", alignItems: "center", marginBottom: "40px" }}>
+          <div style={{ width: "100%", maxWidth: "1091px", display: "flex", flexDirection: "column", gap: "16px", alignItems: "center", marginBottom: "40px" }}>
             <h2 className="font-poppins text-[#111827] text-center" style={{ fontWeight: 600, fontSize: "32px", lineHeight: "1.2", letterSpacing: "-0.25px", textAlign: "center", width: "100%" }}>Our Approach to Measurement</h2>
-            <p className="font-poppins text-[#000000] text-center" style={{ fontWeight: 400, fontSize: "20px", lineHeight: "32px", letterSpacing: "-0.25px", width: "1091px", maxWidth: "100%" }}>
+            <p className="font-poppins text-[#000000] text-center" style={{ fontWeight: 400, fontSize: "20px", lineHeight: "32px", letterSpacing: "-0.25px", width: "100%", maxWidth: "1091px" }}>
               We use a mixed-methods approach that combines quantitative metrics with qualitative storytelling to capture the full picture of our impact.
             </p>
           </div>
-            <div className="flex flex-col" style={{ gap: "16px", width: "1091px", maxWidth: "100%" }}>
+            <div className="flex flex-col" style={{ gap: "16px", width: "100%", maxWidth: "1091px" }}>
               {approaches.map((a) => (
-                <div key={a.title} className="bg-white flex flex-col" style={{ minHeight: "144px", borderRadius: "12px", paddingTop: "40px", paddingBottom: "40px", paddingLeft: "39px", paddingRight: "39px", gap: "10px", justifyContent: "center" }}>
-                  <div style={{ width: "1013px", maxWidth: "100%", display: "flex", flexDirection: "column", gap: "16px" }}>
-                    <p className="font-poppins text-[#111827]" style={{ fontWeight: 600, fontSize: "24px", lineHeight: "28px", letterSpacing: "-0.01em", width: "1013px", maxWidth: "100%" }}>{a.title}</p>
-                    <p className="font-poppins text-[#000000]" style={{ fontWeight: 400, fontSize: "16px", lineHeight: "20px", letterSpacing: "0", width: "1013px", maxWidth: "100%" }}>{a.description}</p>
+                <div key={a.title} className="bg-white flex flex-col" style={{ minHeight: "144px", borderRadius: "12px", padding: "24px", gap: "10px", justifyContent: "center" }}>
+                  <div style={{ width: "100%", display: "flex", flexDirection: "column", gap: "16px" }}>
+                    <p className="font-poppins text-[#111827]" style={{ fontWeight: 600, fontSize: "24px", lineHeight: "28px", letterSpacing: "-0.01em", width: "100%" }}>{a.title}</p>
+                    <p className="font-poppins text-[#000000]" style={{ fontWeight: 400, fontSize: "16px", lineHeight: "20px", letterSpacing: "0", width: "100%" }}>{a.description}</p>
                   </div>
                 </div>
               ))}
@@ -227,7 +227,7 @@ export default function MetricsPage() {
         <section className="w-full flex flex-col items-center justify-center text-center px-5 py-16 lg:py-0" style={{ minHeight: "350px", background: "linear-gradient(135deg, #2a1898 0%, #4229C9 50%, #1a7fc4 100%)", gap: "10px" }}>
           <h2 className="font-poppins font-bold text-white text-2xl lg:text-[32px]" style={{ lineHeight: "1.3", letterSpacing: "-0.25px" }}>Be Part of Our Impact</h2>
           <p className="font-poppins text-white/80 text-sm lg:text-base" style={{ lineHeight: "24px" }}>Join our programmes and contribute to the growing body of evidence for community-led support</p>
-          <div className="flex flex-col sm:flex-row items-center justify-center mt-2" style={{ gap: "16px", width: "400px", maxWidth: "100%" }}>
+          <div className="flex flex-col sm:flex-row items-center justify-center mt-2" style={{ gap: "16px", width: "100%", maxWidth: "400px" }}>
             <Link href="/programmes" className="font-poppins font-medium inline-flex items-center justify-center transition-colors" style={{ width: "209px", height: "50px", borderRadius: "8px", border: "1px solid white", backgroundColor: "#4229C9", color: "white", fontSize: "15px", padding: "12px", gap: "8px", flexShrink: 0 }}>Join a Programme</Link>
             <Link href="#" className="font-poppins font-medium inline-flex items-center justify-center transition-colors" style={{ width: "175px", height: "50px", borderRadius: "8px", border: "1px solid white", backgroundColor: "#FFFFFF", color: "#4229C9", fontSize: "15px", padding: "12px", gap: "8px", flexShrink: 0 }}>Support Our Work</Link>
           </div>

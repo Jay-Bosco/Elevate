@@ -47,20 +47,20 @@ export default function AboutPage() {
       <main>
 
         {/* ── Hero ── */}
-        <section className="w-full flex items-center justify-center text-center px-5" style={{ height: "346px", background: "linear-gradient(180deg, #2a1898 0%, #4229C9 40%, #4a90d9 80%, #6ab4f5 100%)" }}>
-          <div style={{ width: "1191px", maxWidth: "100%", height: "172px", display: "flex", flexDirection: "column", gap: "41px", alignItems: "center", justifyContent: "center" }}>
-            <h1 className="font-poppins text-white" style={{ fontWeight: 600, fontSize: "40px", lineHeight: "64px", letterSpacing: "-0.02em", textAlign: "center", width: "1191px", maxWidth: "100%" }}>About Elev8 (ElevateBrand CiC)</h1>
-            <p className="text-white/90" style={{ fontFamily: "var(--font-dm-sans), Roboto, sans-serif", fontWeight: 400, fontSize: "24px", lineHeight: "36px", letterSpacing: "-0.02em", textAlign: "center", width: "1191px", maxWidth: "100%" }}>
+        <section className="w-full flex items-center justify-center text-center px-5 py-16" style={{ minHeight: "346px", background: "linear-gradient(180deg, #2a1898 0%, #4229C9 40%, #4a90d9 80%, #6ab4f5 100%)" }}>
+          <div style={{ width: "100%", maxWidth: "1191px", display: "flex", flexDirection: "column", gap: "24px", alignItems: "center", justifyContent: "center" }}>
+            <h1 className="font-poppins text-white text-3xl sm:text-4xl lg:text-[40px]" style={{ fontWeight: 600, lineHeight: "1.4", letterSpacing: "-0.02em", textAlign: "center", width: "100%", maxWidth: "1191px" }}>About Elev8 (ElevateBrand CiC)</h1>
+            <p className="text-white/90" style={{ fontFamily: "var(--font-dm-sans), Roboto, sans-serif", fontWeight: 400, fontSize: "18px", lineHeight: "1.6", letterSpacing: "-0.02em", textAlign: "center", width: "100%", maxWidth: "736px" }}>
               Elev8 is a community-rooted social enterprise supporting Black and migrant creatives, leaders, and individuals facing systemic barriers or economic precarity.
             </p>
           </div>
         </section>
 
         {/* ── About Text + Image ── */}
-        <section className="bg-white py-16" style={{ paddingLeft: "86px", paddingRight: "86px" }}>
-          <div style={{ width: "1270px", maxWidth: "100%", display: "flex", flexDirection: "row", alignItems: "center", gap: "33px" }}>
+        <section className="bg-white py-10 px-5 sm:px-8 lg:px-[86px]">
+          <div style={{ width: "100%", maxWidth: "1270px", display: "flex", flexWrap: "wrap", flexDirection: "row", alignItems: "center", gap: "33px" }}>
             {/* Text block */}
-            <div style={{ width: "674px", minWidth: "674px", height: "289px", flexShrink: 0, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+            <div style={{ width: "100%", maxWidth: "674px", display: "flex", flexDirection: "column", gap: "16px" }}>
               <p style={{ fontFamily: "var(--font-dm-sans), Roboto, sans-serif", fontWeight: 400, fontSize: "24px", lineHeight: "36px", letterSpacing: "-0.02em", color: "#000000" }}>
                 Elev8 is a community-rooted social enterprise supporting Black and migrant creatives, leaders, and individuals facing systemic barriers or economic precarity.
               </p>
@@ -69,7 +69,7 @@ export default function AboutPage() {
               </p>
             </div>
             {/* Image */}
-            <div style={{ width: "563px", minWidth: "563px", height: "407px", flexShrink: 0, borderRadius: "12px", overflow: "hidden", marginTop: "-2px" }}>
+            <div style={{ width: "100%", maxWidth: "563px", borderRadius: "12px", overflow: "hidden" }}>
               <img
                 src="/about-team.png"
                 alt="Team collaboration"
@@ -80,11 +80,11 @@ export default function AboutPage() {
         </section>
 
         {/* ── Vision / Mission cards ── */}
-        <section style={{ backgroundColor: "#47EBE00D", paddingTop: "36px", paddingBottom: "36px", paddingLeft: "161px", paddingRight: "161px", minHeight: "395px", display: "flex", alignItems: "center", justifyContent: "center", gap: "10px" }}>
-          <div style={{ width: "990px", maxWidth: "100%", display: "flex", flexDirection: "row", gap: "47px", margin: "0 auto" }}>
+        <section className="px-5 sm:px-8 lg:px-[161px]" style={{ backgroundColor: "#47EBE00D", paddingTop: "36px", paddingBottom: "36px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" style={{ width: "100%", maxWidth: "990px", gap: "47px", margin: "0 auto" }}>
             {visionMission.map((item, i) => (
-              <div key={i} className="bg-white flex flex-col" style={{ width: "300px", minHeight: "323px", borderWidth: "0.2px", borderStyle: "solid", borderColor: "#E5E7EB", borderRadius: "12px", paddingTop: "24px", paddingRight: "28px", paddingBottom: "24px", paddingLeft: "28px" }}>
-                <div style={{ width: "237px", maxWidth: "100%", display: "flex", flexDirection: "column", gap: "16px" }}>
+              <div key={i} className="bg-white flex flex-col" style={{ width: "100%", maxWidth: "300px", minHeight: "323px", borderWidth: "0.2px", borderStyle: "solid", borderColor: "#E5E7EB", borderRadius: "12px", paddingTop: "24px", paddingRight: "28px", paddingBottom: "24px", paddingLeft: "28px", gap: "10px" }}>
+                <div style={{ width: "100%", maxWidth: "237px", display: "flex", flexDirection: "column", gap: "16px" }}>
                   <div className="flex-shrink-0">{item.icon}</div>
                   <p className="font-poppins font-semibold text-[#111827]" style={{ fontSize: "20px", lineHeight: "1.3" }}>{item.title}</p>
                   <p className="font-poppins text-[#000000]" style={{ fontWeight: 400, fontSize: "14px", lineHeight: "22px" }}>{item.description}</p>
@@ -95,8 +95,8 @@ export default function AboutPage() {
         </section>
 
         {/* ── What Makes Us Different ── */}
-        <section className="bg-white py-16 px-5 sm:px-8 lg:px-[148px]">
-          <div className="max-w-[1144px] mx-auto">
+        <section className="bg-white py-16 px-5 sm:px-8 lg:px-[88px]">
+          <div className="max-w-[1265px] mx-auto">
             {/* Icon + heading + subtitle */}
             <div className="flex flex-col items-center text-center mb-10 gap-3">
               <svg width="48" height="48" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -107,22 +107,22 @@ export default function AboutPage() {
             </div>
             {/* 2x2 grid */}
             {/* 2x2 grid */}
-            <div style={{ width: "1265px", maxWidth: "100%", display: "flex", flexDirection: "column", gap: "24px" }}>
+            <div style={{ width: "100%", maxWidth: "1265px", display: "flex", flexDirection: "column", gap: "24px" }}>
               {/* Row 1 */}
-              <div style={{ width: "1265px", maxWidth: "100%", height: "184px", display: "flex", flexDirection: "row", gap: "24px" }}>
+              <div style={{ width: "100%", maxWidth: "1265px", display: "flex", flexWrap: "wrap", flexDirection: "row", gap: "24px" }}>
                 {differences.slice(0, 2).map((d) => (
-                  <div key={d.title} className="flex flex-col" style={{ width: "620px", minWidth: "620px", height: "184px", padding: "28px 32px", gap: "16px", justifyContent: "center", border: "1px solid #4229C9", borderRadius: "12px", boxShadow: "0px 4px 4px 0px #4229C940" }}>
-                    <p className="font-poppins text-[#111827]" style={{ fontWeight: 500, fontSize: "24px", lineHeight: "28px", letterSpacing: "-0.01em", width: d.titleW, maxWidth: "100%", whiteSpace: d.titleNowrap ? "nowrap" : "normal" }}>{d.title}</p>
-                    <p className="font-poppins text-[#000000]" style={{ fontWeight: 400, fontSize: "16px", lineHeight: "20px", letterSpacing: "0", width: d.descW, maxWidth: "100%" }}>{d.description}</p>
+                  <div key={d.title} className="flex flex-col" style={{ width: "100%", maxWidth: "620px", minHeight: "184px", padding: "28px 32px", gap: "16px", justifyContent: "center", border: "1px solid #4229C9", borderRadius: "12px", boxShadow: "0px 4px 4px 0px #4229C940" }}>
+                    <p className="font-poppins text-[#111827]" style={{ fontWeight: 500, fontSize: "24px", lineHeight: "28px", letterSpacing: "-0.01em", width: "100%", maxWidth: "100%" }}>{d.title}</p>
+                    <p className="font-poppins text-[#000000]" style={{ fontWeight: 400, fontSize: "16px", lineHeight: "20px", letterSpacing: "0", width: "100%", maxWidth: "100%" }}>{d.description}</p>
                   </div>
                 ))}
               </div>
               {/* Row 2 */}
-              <div style={{ width: "1265px", maxWidth: "100%", height: "184px", display: "flex", flexDirection: "row", gap: "24px" }}>
+              <div style={{ width: "100%", maxWidth: "1265px", display: "flex", flexWrap: "wrap", flexDirection: "row", gap: "24px" }}>
                 {differences.slice(2, 4).map((d) => (
-                  <div key={d.title} className="flex flex-col" style={{ width: "620px", minWidth: "620px", height: "184px", padding: "28px 32px", gap: "16px", justifyContent: "center", border: "1px solid #4229C9", borderRadius: "12px", boxShadow: "0px 4px 4px 0px #4229C940" }}>
-                    <p className="font-poppins text-[#111827]" style={{ fontWeight: 500, fontSize: "24px", lineHeight: "28px", letterSpacing: "-0.01em", width: d.titleW, maxWidth: "100%", whiteSpace: d.titleNowrap ? "nowrap" : "normal" }}>{d.title}</p>
-                    <p className="font-poppins text-[#000000]" style={{ fontWeight: 400, fontSize: "16px", lineHeight: "20px", letterSpacing: "0", width: d.descW, maxWidth: "100%" }}>{d.description}</p>
+                  <div key={d.title} className="flex flex-col" style={{ width: "100%", maxWidth: "620px", minHeight: "184px", padding: "28px 32px", gap: "16px", justifyContent: "center", border: "1px solid #4229C9", borderRadius: "12px", boxShadow: "0px 4px 4px 0px #4229C940" }}>
+                    <p className="font-poppins text-[#111827]" style={{ fontWeight: 500, fontSize: "24px", lineHeight: "28px", letterSpacing: "-0.01em", width: "100%", maxWidth: "100%" }}>{d.title}</p>
+                    <p className="font-poppins text-[#000000]" style={{ fontWeight: 400, fontSize: "16px", lineHeight: "20px", letterSpacing: "0", width: "100%", maxWidth: "100%" }}>{d.description}</p>
                   </div>
                 ))}
               </div>

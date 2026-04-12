@@ -58,23 +58,23 @@ export default function DonatePage() {
       <main>
 
         {/* ── Hero ── */}
-        <section className="w-full flex items-center justify-center text-center px-5" style={{ height: "346px", background: "linear-gradient(180deg, #2a1898 0%, #4229C9 40%, #4a90d9 80%, #6ab4f5 100%)" }}>
-          <div style={{ width: "1191px", maxWidth: "100%", display: "flex", flexDirection: "column", gap: "24px", alignItems: "center", justifyContent: "center" }}>
-            <h1 className="font-poppins text-white" style={{ fontWeight: 600, fontSize: "40px", lineHeight: "64px", letterSpacing: "-0.02em", textAlign: "center", width: "1068px", maxWidth: "100%" }}>Support Our Work</h1>
-            <p className="text-white/90" style={{ fontFamily: "var(--font-dm-sans), Roboto, sans-serif", fontWeight: 400, fontSize: "24px", lineHeight: "36px", letterSpacing: "-0.02em", textAlign: "center", width: "736px", maxWidth: "100%", height: "72px" }}>
+        <section className="w-full flex items-center justify-center text-center px-5" style={{ minHeight: "346px", background: "linear-gradient(180deg, #2a1898 0%, #4229C9 40%, #4a90d9 80%, #6ab4f5 100%)" }}>
+          <div style={{ width: "100%", maxWidth: "1191px", display: "flex", flexDirection: "column", gap: "24px", alignItems: "center", justifyContent: "center" }}>
+            <h1 className="font-poppins text-white" style={{ fontWeight: 600, fontSize: "40px", lineHeight: "64px", letterSpacing: "-0.02em", textAlign: "center", width: "100%", maxWidth: "1068px" }}>Support Our Work</h1>
+            <p className="text-white/90" style={{ fontFamily: "var(--font-dm-sans), Roboto, sans-serif", fontWeight: 400, fontSize: "24px", lineHeight: "36px", letterSpacing: "-0.02em", textAlign: "center", width: "100%", maxWidth: "736px", height: "72px" }}>
               Help us create pathways to dignity and opportunity for Black and migrant creatives
             </p>
           </div>
         </section>
 
         {/* ── Your Donation Makes a Difference ── */}
-        <section style={{ backgroundColor: "#47EBE00D", paddingTop: "61px", paddingBottom: "61px", paddingLeft: "143px", paddingRight: "143px", minHeight: "329px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-          <div style={{ width: "1154px", maxWidth: "100%", minHeight: "207px", display: "flex", flexDirection: "column", alignItems: "center", gap: "32px" }}>
+        <section className="px-5 sm:px-8 lg:px-[143px]" style={{ backgroundColor: "#47EBE00D", paddingTop: "61px", paddingBottom: "61px", minHeight: "329px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <div style={{ width: "100%", maxWidth: "1154px", minHeight: "207px", display: "flex", flexDirection: "column", alignItems: "center", gap: "32px" }}>
             <h2 className="font-poppins text-[#111827] text-center" style={{ fontWeight: 600, fontSize: "32px", lineHeight: "1.2", letterSpacing: "-0.25px", width: "100%", maxWidth: "1154px" }}>Your Donation Makes a Difference</h2>
-            <div style={{ display: "flex", flexDirection: "row", gap: "24px", width: "870px", maxWidth: "100%" }}>
+            <div className="flex flex-col sm:flex-row" style={{ gap: "24px", width: "100%", maxWidth: "870px" }}>
               {tiers.map((t) => (
-                <div key={t.amount} className="bg-white flex flex-col items-center text-center" style={{ width: "274px", height: "132px", borderWidth: "0.1px", borderStyle: "solid", borderColor: "#37065940", borderRadius: "12px", padding: "24px", gap: "10px", justifyContent: "center", boxShadow: "0px 4px 4px 0px #00000040" }}>
-                  <p className="font-poppins text-center" style={{ fontWeight: 600, fontSize: "32px", lineHeight: "28px", letterSpacing: "-0.01em", color: "#2F217B", width: "226px", maxWidth: "100%" }}>{t.amount}</p>
+                <div key={t.amount} className="bg-white flex flex-col items-center text-center" style={{ flex: 1, minHeight: "132px", borderWidth: "0.1px", borderStyle: "solid", borderColor: "#37065940", borderRadius: "12px", padding: "24px", gap: "10px", justifyContent: "center", boxShadow: "0px 4px 4px 0px #00000040" }}>
+                  <p className="font-poppins text-center" style={{ fontWeight: 600, fontSize: "32px", lineHeight: "28px", letterSpacing: "-0.01em", color: "#2F217B", width: "100%", maxWidth: "226px" }}>{t.amount}</p>
                   <p className="font-poppins text-[#000000]" style={{ fontWeight: 400, fontSize: "14px", lineHeight: "1.6" }}>{t.description}</p>
                 </div>
               ))}
@@ -83,12 +83,12 @@ export default function DonatePage() {
         </section>
 
         {/* ── Why Your Support Matters ── */}
-        <section className="bg-white" style={{ padding: "60px 175px" }}>
-          <div style={{ width: "1110px", maxWidth: "100%", minHeight: "323px", margin: "0 auto" }}>
+        <section className="bg-white px-5 sm:px-8 lg:px-[175px]" style={{ paddingTop: "40px", paddingBottom: "32px" }}>
+          <div style={{ width: "100%", maxWidth: "1110px", margin: "0 auto" }}>
             <h2 className="font-poppins font-bold text-[#111827] text-center mb-10" style={{ fontSize: "32px", lineHeight: "1.2", letterSpacing: "-0.25px" }}>Why Your Support Matters</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2" style={{ columnGap: "60px", rowGap: "32px", width: "1097px", maxWidth: "100%" }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2" style={{ columnGap: "60px", rowGap: "32px", width: "100%", maxWidth: "1097px" }}>
               {reasons.map((r) => (
-                <div key={r.title} className="flex items-start" style={{ gap: "10px", width: "517px", maxWidth: "100%", minHeight: "84px" }}>
+                <div key={r.title} className="flex items-start" style={{ gap: "10px", width: "100%", maxWidth: "517px", minHeight: "84px" }}>
                   <CheckCircle />
                   <div>
                     <p className="font-poppins text-[#111827]" style={{ fontWeight: 600, fontSize: "24px", lineHeight: "28px", letterSpacing: "-0.01em", marginBottom: "4px" }}>{r.title}</p>
@@ -101,7 +101,7 @@ export default function DonatePage() {
         </section>
 
         {/* ── Other Ways to Support ── */}
-        <section className="bg-white py-14 px-5 sm:px-8 lg:px-[104px]">
+        <section className="px-5 sm:px-8 lg:px-[104px] py-14" style={{ backgroundColor: "#7979790D" }}>
           <div className="max-w-[1232px] mx-auto">
             <h2 className="font-poppins font-bold text-[#111827] text-center mb-10" style={{ fontSize: "32px", lineHeight: "1.2", letterSpacing: "-0.25px" }}>Other Ways to Support</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -110,7 +110,7 @@ export default function DonatePage() {
                   <div className="flex-shrink-0">{w.icon}</div>
                   <p className="font-poppins font-semibold text-[#111827]" style={{ fontSize: "18px" }}>{w.title}</p>
                   <p className="font-poppins text-[#000000]" style={{ fontWeight: 400, fontSize: "14px", lineHeight: "1.6" }}>{w.description}</p>
-                  <Link href={w.btnHref} className="font-poppins font-semibold inline-flex items-center justify-center" style={{ width: w.title === "Spread the Word" ? "120px" : "100px", height: "25px", borderRadius: "8px", border: "1px solid #370659", backgroundColor: "white", color: "#111827", fontSize: "11px", opacity: 0.6, padding: "0 12px", gap: "8px" }}>{w.btnLabel}</Link>
+                  <Link href={w.btnHref} className="font-poppins font-semibold inline-flex items-center justify-center" style={{ width: w.title === "Spread the Word" ? "120px" : "100px", height: "25px", borderRadius: "8px", border: "1px solid #370659", backgroundColor: "white", color: "#370659", fontSize: "11px", opacity: 0.6, padding: "0 12px", gap: "8px" }}>{w.btnLabel}</Link>
                 </div>
               ))}
             </div>
