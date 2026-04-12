@@ -68,10 +68,10 @@ export default function DonatePage() {
         </section>
 
         {/* ── Your Donation Makes a Difference ── */}
-        <section style={{ backgroundColor: "#47EBE00D", paddingTop: "61px", paddingBottom: "61px", paddingLeft: "143px", paddingRight: "143px", minHeight: "329px", gap: "10px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-          <div className="max-w-[1232px] mx-auto">
-            <h2 className="font-poppins text-[#111827] text-center mb-10" style={{ fontWeight: 600, fontSize: "32px", lineHeight: "1.2", letterSpacing: "-0.25px", width: "1154px", maxWidth: "100%" }}>Your Donation Makes a Difference</h2>
-            <div style={{ display: "flex", flexDirection: "row", gap: "24px", width: "870px", maxWidth: "100%", margin: "0 auto" }}>
+        <section style={{ backgroundColor: "#47EBE00D", paddingTop: "61px", paddingBottom: "61px", paddingLeft: "143px", paddingRight: "143px", minHeight: "329px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <div style={{ width: "1154px", maxWidth: "100%", minHeight: "207px", display: "flex", flexDirection: "column", alignItems: "center", gap: "32px" }}>
+            <h2 className="font-poppins text-[#111827] text-center" style={{ fontWeight: 600, fontSize: "32px", lineHeight: "1.2", letterSpacing: "-0.25px", width: "100%", maxWidth: "1154px" }}>Your Donation Makes a Difference</h2>
+            <div style={{ display: "flex", flexDirection: "row", gap: "24px", width: "870px", maxWidth: "100%" }}>
               {tiers.map((t) => (
                 <div key={t.amount} className="bg-white flex flex-col items-center text-center" style={{ width: "274px", height: "132px", borderWidth: "0.1px", borderStyle: "solid", borderColor: "#37065940", borderRadius: "12px", padding: "24px", gap: "10px", justifyContent: "center", boxShadow: "0px 4px 4px 0px #00000040" }}>
                   <p className="font-poppins text-center" style={{ fontWeight: 600, fontSize: "32px", lineHeight: "28px", letterSpacing: "-0.01em", color: "#2F217B", width: "226px", maxWidth: "100%" }}>{t.amount}</p>
